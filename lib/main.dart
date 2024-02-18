@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +14,18 @@ class Home extends StatelessWidget {
       appBar: AppBar(
           title: Text('App'),centerTitle: true,backgroundColor: Colors.blue,
       ),
-          body: Image.asset('img/DSC_1240.JPG', height: 300),
+          body:
+          Row(children: [
+            Image.asset('img/DSC_1240.JPG', height: 120),
+            OutlinedButton(onPressed: (){
+              print('object');
+            }, child: Text('test1')),
+            ElevatedButton(onPressed: (){
+              print('object');
+            }, child: Text('test2')),
+          ],),
+        // ElevatedButton(child: Icon(Icons.add),)
+
     );
   }
 }
