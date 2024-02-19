@@ -24,7 +24,13 @@ class Home extends StatelessWidget {
               print('object');
             }, child: Text('test2')),
           ],),
-        // ElevatedButton(child: Icon(Icons.add),)
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print('floating action button clicked');
+        },
+        child: Icon(Icons.add),
+        backgroundColor: Colors.blue,
+      ),
 
     );
   }
